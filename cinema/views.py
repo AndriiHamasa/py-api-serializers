@@ -19,7 +19,7 @@ class GenreViewSet(viewsets.ModelViewSet):
     serializer_class = GenreSerializer
 
 
-class ActorVieSet(viewsets.ModelViewSet):
+class ActorViewSet(viewsets.ModelViewSet):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 
@@ -31,7 +31,6 @@ class CinemaHallViewSet(viewsets.ModelViewSet):
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
-    serializer_class = MovieSerializer
 
     def get_queryset(self):
         if self.action in ("list", "retrieve"):
